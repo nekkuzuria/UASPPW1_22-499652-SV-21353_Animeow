@@ -224,7 +224,7 @@ Movie Details Page
 ```
 Desain Umum: Bagian ini terdiri dari dua kolom dalam sebuah baris. Kolom pertama (col-md-6) digunakan untuk menampilkan poster film, sedangkan kolom kedua (col-md-6) digunakan untuk menampilkan informasi terkait film.
 Poster Film: Poster film ditampilkan menggunakan elemen <img> dengan class "img-fluid poster". Poster film diambil dari link yang tersimpan dalam variabel $image.
-Informasi Film: Informasi film ditampilkan dalam kolom kedua. Terdapat judul film (title) yang ditampilkan sebagai elemen <h2>. Informasi lainnya seperti tahun rilis (release_year), durasi (duration), dan studio produksi (studio) ditampilkan sebagai elemen <p>. Deskripsi film (description) ditampilkan sebagai elemen <p> juga.
+Informasi Film: Informasi film ditampilkan dalam kolom kedua. Terdapat judul film (title) yang ditampilkan sebagai elemen h2. Informasi lainnya seperti tahun rilis (release_year), durasi (duration), dan studio produksi (studio) ditampilkan sebagai elemen p. Deskripsi film (description) ditampilkan sebagai elemen p juga.
 
 
 ** - Website responsive, dapat diakses melalui device: Mobile, Tablet dan Laptop **
@@ -235,5 +235,112 @@ Tablet
 Mobile
 ![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/06ee409c-a828-43a2-9c64-c7523d5f2ffc)
 
+```html
+<!-- MOVIE LIST START -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Featured Movies</h2>
+            <div class="row d-flex flex-wrap">
+                <?php
+                include 'koneksi.php';
 
+                if (isset($_GET['query'])) {
+                    $query = $_GET['query'];
+                    $sql = "SELECT * FROM movie WHERE title LIKE '%$query%'";
+                } else {
+                    $sql = "SELECT * FROM movie";
+                }
+
+                $result = mysqli_query($conn, $sql);
+
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $image = $row['poster_link'];
+                        $title = $row['title'];
+                        $description = $row['description'];
+                        $id = $row['movie_id'];
+
+                        echo '<div class="col-md-3">
+                                <div class="card mb-3">
+                                    <a href="movie-detail.php?id=' . $id . '" target="_blank">
+                                        <img src="' . $image . '" class="card-img-top" alt="' . $title . '" >  
+                                    </a>  
+                                </div>
+                                <p class="card-title h6 mb-5">' . $title . '</p>
+                            </div>';
+                    }
+                } else {
+                    echo 'No results found';
+                }
+                ?>
+            </div>
+        </div>
+    </section>
+    <!-- MOVIE LIST END -->
+```
+Bootstrap Grid System: Kode tersebut menggunakan sistem grid dari Bootstrap dengan menggunakan class "col-md-3" untuk menampilkan empat film dalam satu baris pada tampilan desktop (lebar ≥ 992px). Namun, saat tampilan berukuran lebih kecil (lebar < 992px), film akan menyesuaikan dan mengatur ulang tata letaknya secara responsif untuk menampilkan sebanyak mungkin film dalam satu baris.
+Responsive Images: Gambar film menggunakan class "card-img-top" yang secara otomatis menyesuaikan ukuran gambar dengan tata letak kartu (card) yang diatur oleh Bootstrap. Dengan demikian, gambar film akan diubah ukurannya agar proporsional dan tetap terlihat baik pada berbagai ukuran layar.
+Text Wrapping: Judul film (title) menggunakan class "h6" yang secara responsif akan menyesuaikan ukuran teks sesuai dengan tata letak kartu (card). Jika teks judul terlalu panjang untuk muat dalam satu baris, maka teks akan otomatis dipotong dan ditampilkan dalam beberapa baris dengan menggunakan efek pembungkus teks (text wrapping).
+
+** - Direct feedback ke pengguna website **
+![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/aae290ae-7906-4949-9918-f5ad9834ad6b)
+```html
+<form method="GET" class="search">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search" name="query" required>
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit">Search</button>
+                        </div>
+                    </div>
+                </form>
+```
+```html
+<?php
+                include 'koneksi.php';
+
+                if (isset($_GET['query'])) {
+                    $query = $_GET['query'];
+                    $sql = "SELECT * FROM movie WHERE title LIKE '%$query%'";
+                } else {
+                    $sql = "SELECT * FROM movie";
+                }
+
+                $result = mysqli_query($conn, $sql);
+
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $image = $row['poster_link'];
+                        $title = $row['title'];
+                        $description = $row['description'];
+                        $id = $row['movie_id'];
+
+                        echo '<div class="col-md-3">
+                                <div class="card mb-3">
+                                    <a href="movie-detail.php?id=' . $id . '" target="_blank">
+                                        <img src="' . $image . '" class="card-img-top" alt="' . $title . '" >  
+                                    </a>  
+                                </div>
+                                <p class="card-title h6 mb-5">' . $title . '</p>
+                            </div>';
+                    }
+                } else {
+                    echo 'No results found';
+                }
+                ?>
+```
+Pertama, file koneksi database diikutsertakan untuk memastikan koneksi yang tepat. Kemudian, kode akan memeriksa apakah ada parameter pencarian yang diterima melalui URL. Jika ada, kata kunci pencarian akan diambil dan query SQL akan dibuat untuk mencari film yang judulnya mengandung kata kunci tersebut. Jika tidak ada parameter pencarian, semua film akan diambil dari database. Setelah itu, query dieksekusi dan hasilnya diperiksa. Jika ada film yang sesuai dengan pencarian, setiap baris hasil akan ditampilkan dengan menampilkan gambar, judul, dan tautan ke halaman detail film. Namun, jika tidak ada film yang sesuai dengan pencarian, pesan "No results found" akan ditampilkan untuk memberikan umpan balik yang jelas kepada pengguna bahwa tidak ada film yang sesuai dengan kata kunci pencarian mereka.
+
+** - Konten dinamis dari database **
+Menampilkan detail movie berdasarkan movie_id
+![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/9ca68a63-5114-446f-8433-944b2a91e498)
+![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/ff3e79d1-1404-4f23-bfc8-5d405be5789a)
+![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/889878e4-d5e0-4a6f-bb5c-e81841e5dc9b)
+
+Menampilkan wishlist berdasarkan user_id yang login
+![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/710b205e-efc2-45ac-ac90-c12d749789d7)
+![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/499037f6-cd2b-45d6-90c5-6913f05bfa38)
+
+Redirect ke link youtube berdasarkan movie_id
+![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/c2f062cf-6123-4c62-b4df-32d531a55d1b)
+![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/5f92e240-bfe9-4516-a31d-3128bc768cf2)
 
