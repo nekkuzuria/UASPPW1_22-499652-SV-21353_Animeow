@@ -1,4 +1,4 @@
-**ANIMEOW - PLATFORM STREAMING ANIME MOVIES **
+# ANIMEOW - PLATFORM STREAMING ANIME MOVIES 
 Amanda Farliana Setyasari (22/499652/SV/21353)
 
 Penjelasan Website - Animeow
@@ -12,7 +12,8 @@ Kriteria Penilaian
 
 
 Bagaimana Animeow Memenuhi 4 Kriteria Penilaian
-**- Desain rapi mengikuti kaidah atau prinsip desain**
+
+** - Desain rapi mengikuti kaidah atau prinsip desain **
 Login Page
 ![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/6c00f210-8b67-451a-ba8e-577e06b0384d)
 ```html
@@ -117,9 +118,9 @@ Login Page
     </div>
     <!-- LOGIN FORM END -->
 ```
-**Desain Umum**: Form login dan form sign up menggunakan pendekatan desain kartu tiga dimensi (3D). Terdapat dua sisi pada setiap kartu: bagian depan (card-front) untuk form login dan bagian belakang (card-back) untuk form sign up. Pengguna dapat memilih antara kedua sisi dengan mengklik opsi "Log In" atau "Sign Up". Setiap kartu memiliki efek animasi yang memberikan kesan tiga dimensi.
-**Form Login**: Kartu depan (card-front) berisi form login. Terdapat input field untuk memasukkan username (loguser) dan password (logpass). Icon ikonografi digunakan untuk mengilustrasikan jenis input field yang sesuai (ikon pengguna dan ikon kunci). Tombol "Login" digunakan untuk mengirimkan form login.
-**Form Sign Up**: Kartu belakang (card-back) berisi form sign up. Terdapat input field untuk memasukkan email (logemail), username (loguser), password (logpass1), dan konfirmasi password (logpass2). Icon ikonografi juga digunakan untuk mengilustrasikan jenis input field yang sesuai. Tombol "Sign Up" digunakan untuk mengirimkan form sign up.
+Desain Umum: Form login dan form sign up menggunakan pendekatan desain kartu tiga dimensi (3D). Terdapat dua sisi pada setiap kartu: bagian depan (card-front) untuk form login dan bagian belakang (card-back) untuk form sign up. Pengguna dapat memilih antara kedua sisi dengan mengklik opsi "Log In" atau "Sign Up". Setiap kartu memiliki efek animasi yang memberikan kesan tiga dimensi.
+Form Login: Kartu depan (card-front) berisi form login. Terdapat input field untuk memasukkan username (loguser) dan password (logpass). Icon ikonografi digunakan untuk mengilustrasikan jenis input field yang sesuai (ikon pengguna dan ikon kunci). Tombol "Login" digunakan untuk mengirimkan form login.
+Form Sign Up: Kartu belakang (card-back) berisi form sign up. Terdapat input field untuk memasukkan email (logemail), username (loguser), password (logpass1), dan konfirmasi password (logpass2). Icon ikonografi juga digunakan untuk mengilustrasikan jenis input field yang sesuai. Tombol "Sign Up" digunakan untuk mengirimkan form sign up.
 
 
 Home Page
@@ -221,17 +222,18 @@ Movie Details Page
     </section>
     <!-- MOVIE DETAIL END -->
 ```
-**Desain Umum**: Bagian ini terdiri dari dua kolom dalam sebuah baris. Kolom pertama (col-md-6) digunakan untuk menampilkan poster film, sedangkan kolom kedua (col-md-6) digunakan untuk menampilkan informasi terkait film.
-**Gambar Film**: Gambar film ditampilkan menggunakan elemen <img> dengan class "img-fluid poster". Gambar film diambil dari link yang tersimpan dalam variabel $image.
-**Informasi Film**: Informasi film ditampilkan dalam kolom kedua. Terdapat judul film (title) yang ditampilkan sebagai elemen <h2>. Informasi lainnya seperti tahun rilis (release_year), durasi (duration), dan studio produksi (studio) ditampilkan sebagai elemen <p>. Deskripsi film (description) ditampilkan sebagai elemen <p> juga.
+Desain Umum: Bagian ini terdiri dari dua kolom dalam sebuah baris. Kolom pertama (col-md-6) digunakan untuk menampilkan poster film, sedangkan kolom kedua (col-md-6) digunakan untuk menampilkan informasi terkait film.
+Poster Film: Poster film ditampilkan menggunakan elemen <img> dengan class "img-fluid poster". Poster film diambil dari link yang tersimpan dalam variabel $image.
+Informasi Film: Informasi film ditampilkan dalam kolom kedua. Terdapat judul film (title) yang ditampilkan sebagai elemen <h2>. Informasi lainnya seperti tahun rilis (release_year), durasi (duration), dan studio produksi (studio) ditampilkan sebagai elemen <p>. Deskripsi film (description) ditampilkan sebagai elemen <p> juga.
 
 
-**- Website responsive, dapat diakses melalui device: Mobile, Tablet dan Laptop **
+** - Website responsive, dapat diakses melalui device: Mobile, Tablet dan Laptop **
 Desktop
 ![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/87d0a172-3301-4676-ae6d-7f4d725a9f77)
 Tablet
 ![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/89edc98f-82af-49cf-8a02-4ad579773ce1)
 Mobile
 ![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/06ee409c-a828-43a2-9c64-c7523d5f2ffc)
+
 
 
