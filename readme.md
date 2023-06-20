@@ -1,6 +1,8 @@
 # ANIMEOW - PLATFORM STREAMING ANIME MOVIES 
 Amanda Farliana Setyasari (22/499652/SV/21353)
 
+Demonstrasi video : https://drive.google.com/file/d/1jo4s0P1lJj2UPPC_LJ7h_QBZsAzO7vC5/view?usp=sharing
+
 Penjelasan Website - Animeow
 
 Animeow adalah sebuah website platform streaming anime movies yang dirancang untuk memenuhi kebutuhan para penggemar anime. Melalui website ini, pengguna dapat dengan mudah menonton berbagai judul anime populer secara online. Dengan menyediakan koleksi anime yang cukup lengkap, fitur pencarian yang cukup efisien, Animeow berupaya mencakup berbagai permasalahan yang sering dihadapi oleh penggemar anime, seperti sulitnya menemukan anime yang diinginkan, kesulitan dalam menonton anime secara legal, atau keterbatasan aksesibilitas terhadap judul-judul anime tertentu. Dengan demikian, Animeow menjadi solusi yang memudahkan pengguna untuk mengeksplorasi dunia anime dan menikmati tontonan yang mereka sukai.
