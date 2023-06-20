@@ -2,6 +2,7 @@
 Amanda Farliana Setyasari (22/499652/SV/21353)
 
 Penjelasan Website - Animeow
+
 Animeow adalah sebuah website platform streaming anime movies yang dirancang untuk memenuhi kebutuhan para penggemar anime. Melalui website ini, pengguna dapat dengan mudah menonton berbagai judul anime populer secara online. Dengan menyediakan koleksi anime yang cukup lengkap, fitur pencarian yang cukup efisien, Animeow berupaya mencakup berbagai permasalahan yang sering dihadapi oleh penggemar anime, seperti sulitnya menemukan anime yang diinginkan, kesulitan dalam menonton anime secara legal, atau keterbatasan aksesibilitas terhadap judul-judul anime tertentu. Dengan demikian, Animeow menjadi solusi yang memudahkan pengguna untuk mengeksplorasi dunia anime dan menikmati tontonan yang mereka sukai.
 
 Kriteria Penilaian
@@ -13,7 +14,8 @@ Kriteria Penilaian
 
 Bagaimana Animeow Memenuhi 4 Kriteria Penilaian
 
-** - Desain rapi mengikuti kaidah atau prinsip desain **
+- Desain rapi mengikuti kaidah atau prinsip desain
+  
 Login Page
 ![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/6c00f210-8b67-451a-ba8e-577e06b0384d)
 ```html
@@ -227,7 +229,7 @@ Poster Film: Poster film ditampilkan menggunakan elemen <img> dengan class "img-
 Informasi Film: Informasi film ditampilkan dalam kolom kedua. Terdapat judul film (title) yang ditampilkan sebagai elemen h2. Informasi lainnya seperti tahun rilis (release_year), durasi (duration), dan studio produksi (studio) ditampilkan sebagai elemen p. Deskripsi film (description) ditampilkan sebagai elemen p juga.
 
 
-** - Website responsive, dapat diakses melalui device: Mobile, Tablet dan Laptop **
+- Website responsive, dapat diakses melalui device: Mobile, Tablet dan Laptop 
 Desktop
 ![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/87d0a172-3301-4676-ae6d-7f4d725a9f77)
 Tablet
@@ -282,7 +284,7 @@ Bootstrap Grid System: Kode tersebut menggunakan sistem grid dari Bootstrap deng
 Responsive Images: Gambar film menggunakan class "card-img-top" yang secara otomatis menyesuaikan ukuran gambar dengan tata letak kartu (card) yang diatur oleh Bootstrap. Dengan demikian, gambar film akan diubah ukurannya agar proporsional dan tetap terlihat baik pada berbagai ukuran layar.
 Text Wrapping: Judul film (title) menggunakan class "h6" yang secara responsif akan menyesuaikan ukuran teks sesuai dengan tata letak kartu (card). Jika teks judul terlalu panjang untuk muat dalam satu baris, maka teks akan otomatis dipotong dan ditampilkan dalam beberapa baris dengan menggunakan efek pembungkus teks (text wrapping).
 
-** - Direct feedback ke pengguna website **
+- Direct feedback ke pengguna website
 ![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/aae290ae-7906-4949-9918-f5ad9834ad6b)
 ```html
 <form method="GET" class="search">
@@ -330,7 +332,8 @@ Text Wrapping: Judul film (title) menggunakan class "h6" yang secara responsif a
 ```
 Pertama, file koneksi database diikutsertakan untuk memastikan koneksi yang tepat. Kemudian, kode akan memeriksa apakah ada parameter pencarian yang diterima melalui URL. Jika ada, kata kunci pencarian akan diambil dan query SQL akan dibuat untuk mencari film yang judulnya mengandung kata kunci tersebut. Jika tidak ada parameter pencarian, semua film akan diambil dari database. Setelah itu, query dieksekusi dan hasilnya diperiksa. Jika ada film yang sesuai dengan pencarian, setiap baris hasil akan ditampilkan dengan menampilkan gambar, judul, dan tautan ke halaman detail film. Namun, jika tidak ada film yang sesuai dengan pencarian, pesan "No results found" akan ditampilkan untuk memberikan umpan balik yang jelas kepada pengguna bahwa tidak ada film yang sesuai dengan kata kunci pencarian mereka.
 
-** - Konten dinamis dari database **
+- Konten dinamis dari database
+  
 Menampilkan detail movie berdasarkan movie_id
 ![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/9ca68a63-5114-446f-8433-944b2a91e498)
 ![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/ff3e79d1-1404-4f23-bfc8-5d405be5789a)
