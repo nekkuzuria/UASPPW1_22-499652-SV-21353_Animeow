@@ -338,7 +338,8 @@ Menampilkan detail movie berdasarkan movie_id
 
 Menampilkan wishlist berdasarkan user_id yang login
 ![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/710b205e-efc2-45ac-ac90-c12d749789d7)
-![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/499037f6-cd2b-45d6-90c5-6913f05bfa38)
+![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/821625ac-7cf6-4b6e-a273-2920b5ecf443)
+
 
 Redirect ke link youtube berdasarkan movie_id
 ![image](https://github.com/nekkuzuria/UASPPW1_22-499652-SV-21353_Animeow/assets/44936062/c2f062cf-6123-4c62-b4df-32d531a55d1b)
